@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Mali:wght@300;400;500;600;700&family=Pangolin&display=swap"
+        rel="stylesheet">
+
+    <title>Bank for Kids</title>
+</head>
+
+<body>
+    <div class="main-card">
+        <header>
+            <div class="bienvenido">
+                <img src="img/david-profile.png" alt="" width="70px" height="70px">
+                <p>¡Bievenido Sergio David!</p>
+            </div>
+            <div class="cerrar-sesion">
+                <a href="index.html" class="bttn-close-sesion"> Cerrar sesión</a>
+            </div>
+        </header>
+
+        <section class="upper-screen">
+            <div class="buttons-upper">
+                <button onclick="show()" class="bttn-green">Mostrar saldo</button>
+                <button onclick="hide()" class="bttn-blue">Ocultar saldo</button>
+            </div>
+
+            <div id="error-max">
+                <p> <b>¡ERROR! Cantidad no valida.</b></p>
+                   <P> No puedes tener más de $990 en tu cuenta. </p>
+            </div>
+            <div id="error-min">
+                <p> <b>¡ERROR! Cantidad no valida.</b></p>
+                   <P> No puedes tener menos de $10 en tu cuenta. </p>
+            </div>
+
+            <div class="display-screen">
+                <div id="display-numbers">
+                    <h1>$</h1>
+                    <h1 id="balance-display"></h1>
+                </div>
+            </div>
+        </section>
+
+      
+        <section class="bottom-screen">
+            <div class="add-money">
+                <p>Escribe aquí la cantidad de dinero para agregar o retirar: </p>
+                <input type="number" name="new-number" id="new-quantity" placeholder="$">
+            </div>
+            <div class="buttons-bottom">
+                <button id="increment" onclick="incrementNumber()" class="bttn-green"> +  Agregar dinero</button>
+                <button id="decrement" onclick="decrementNumber()" class="bttn-red"> -  Retirar dinero</button>
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+
+
+
+    <script src="js/script-template.js" defer></script>
+</body>
+
+</html>
