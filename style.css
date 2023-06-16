@@ -9,11 +9,13 @@
 
 /* ESTILOS HOME */
 
+
+
 .main-card-home {
-    margin: 20px;
+    margin: 90px 20px;
     width: auto;
     height: auto;
-    padding: 15px;
+    padding: 50px 20px;
     border-radius: 50px;
     background: rgb(254, 254, 254);
     background: linear-gradient(180deg, rgba(254, 254, 254, 1) 0%, rgba(231, 235, 255, 1) 92%);

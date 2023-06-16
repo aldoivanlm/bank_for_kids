@@ -55,22 +55,22 @@ function alertMinBalanceOff() {
 function incrementNumber() {
     alertMinBalanceOff()
     alertMaxBalanceOff()
-if (newQuantity.value != "") {
-    initialBalance = (initialBalance) + (parseInt(newQuantity.value));
+    if (newQuantity.value != "") {
+        initialBalance = (initialBalance) + (parseInt(newQuantity.value));
 
-    if (initialBalance > 10 && initialBalance < 990) {
-        document.getElementById("balance-display").innerHTML = initialBalance;
-    } else {
-        alertMaxBalanceOn();
-        initialBalance = (initialBalance) - (parseInt(newQuantity.value));
+        if (initialBalance > 10 && initialBalance < 990) {
+            document.getElementById("balance-display").innerHTML = initialBalance;
+        } else {
+            alertMaxBalanceOn();
+            initialBalance = (initialBalance) - (parseInt(newQuantity.value));
+        }
+
+        newQuantity.value = "";
     }
-
-    newQuantity.value = "";
-}
 }
 
 
-    
+
 
 
 function decrementNumber() {
@@ -79,14 +79,14 @@ function decrementNumber() {
 
     if (newQuantity.value != "") {
 
-    initialBalance = (initialBalance) - (parseInt(newQuantity.value));
+        initialBalance = (initialBalance) - (parseInt(newQuantity.value));
 
-    if (initialBalance > 10 && initialBalance < 990) {
-        document.getElementById("balance-display").innerHTML = initialBalance;
-    } else {
-        alertMinBalanceOn();
-        initialBalance = (initialBalance) + (parseInt(newQuantity.value));
-    }
+        if (initialBalance > 10 && initialBalance < 990) {
+            document.getElementById("balance-display").innerHTML = initialBalance;
+        } else {
+            alertMinBalanceOn();
+            initialBalance = (initialBalance) + (parseInt(newQuantity.value));
+        }
 
         newQuantity.value = "";
     }
@@ -98,17 +98,17 @@ function decrementNumber() {
 
 
 
-    // FUNCIONES PARA OCULTAR Y MOSTRAR SALDO
+// FUNCIONES PARA OCULTAR Y MOSTRAR SALDO
 
 
-    function show() {
-        document.getElementById('display-numbers').style.visibility = "visible";
+function show() {
+    document.getElementById('display-numbers').style.visibility = "visible";
 
-    }
-    function hide() {
-        document.getElementById('display-numbers').style.visibility = "hidden";
+}
+function hide() {
+    document.getElementById('display-numbers').style.visibility = "hidden";
 
-    }
+}
 
 
 
